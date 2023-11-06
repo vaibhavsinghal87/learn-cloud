@@ -5,3 +5,12 @@ kubectl get pods -o wide
 kubectl expose deployment/hello --port 8080 --type NodePort  
 kubectl get svc  
 curl localhost:<port_number>  
+
+--- 
+
+**Run command inside POD -**  
+kubectl create deployment nginx --image=nginx  
+kubectl exec deployment/nginx -- date  
+kubectl exec pod/<pod_name> -- date  
+
+---
